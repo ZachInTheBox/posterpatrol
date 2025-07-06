@@ -20,7 +20,7 @@ export async function onRequestPost(context) {
     },
     body: JSON.stringify({
       from: "Poster Patrol <hello@posterpatrol.com>",
-      to: "zlunchick@gmail.com.com", 
+      to: "zlunchick@gmail.com", 
       subject: `Contact Form: ${subject}`,
       html: `<strong>From:</strong> ${name} (${email})<br><br>${message.replace(/\n/g, "<br>")}`,
     }),
