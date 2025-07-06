@@ -27,7 +27,7 @@ export async function onRequestPost(context) {
   });
 
   if (!emailRes.ok) {
-    return new Response("Failed to send email", { status: 500 });
+    return new Response("Error sending email", { status: 500 });
   }
 
   return new Response("Success", { status: 200 });
