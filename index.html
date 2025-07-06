@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Patrol - Los Angeles Rental Compliance Made Easy</title>
+    <meta name="description" content="Simplify LA rental compliance with automatic poster updates. Stay compliant with Municipal Code sections 165.05 and 151.09. Starting at $39.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Poster Patrol</h1>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="btn btn-primary" onclick="scrollToPricing()">Get Started</button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Los Angeles Rental Compliance Made Easy</h1>
+                <p class="hero-subtitle">
+                    Stay compliant with LA Municipal Code sections 165.05 and 151.09. 
+                    We track regulation changes and automatically mail updated posters to your properties.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToPricing()">Get Compliant Now</button>
+                    <button class="btn btn-secondary btn-large" onclick="scrollToSection('faq')">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="compliance-visual">
+                    <div class="poster-frame">
+                        <div class="poster-content">
+                            <h3>LA MUNICIPAL CODE</h3>
+                            <p>Section 165.05 & 151.09</p>
+                            <div class="compliance-badge">✓ COMPLIANT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Compliance Plan</h2>
+                <p>Professional compliance solutions for Los Angeles rental properties</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- One-time Purchase -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>One-Time Purchase</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">39</span>
+                        </div>
+                        <p class="price-description">Current compliance posters</p>
+                    </div>
+                    
+                    <ul class="features">
+                        <li>✓ Complete set of current LA compliance posters</li>
+                        <li>✓ Professional quality printing</li>
+                        <li>✓ Fast delivery to your property</li>
+                        <li>✓ Municipal Code 165.05 & 151.09 compliant</li>
+                    </ul>
+                    
+                    <div class="frame-kit-option">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="frameKit1" onchange="updateOneTimePrice()">
+                            <span class="checkmark"></span>
+                            Add Professional Frame Kit (+$34.99)
+                        </label>
+                        <div class="frame-colors" id="frameColors1" style="display: none;">
+                            <label>Frame Color:</label>
+                            <div class="color-options">
+                                <label class="color-option">
+                                    <input type="radio" name="frameColor1" value="black" checked>
+                                    <span class="color-swatch color-black"></span>
+                                    Black
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="frameColor1" value="wood">
+                                    <span class="color-swatch color-wood"></span>
+                                    Wood
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="frameColor1" value="gold">
+                                    <span class="color-swatch color-gold"></span>
+                                    Gold
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-full" onclick="startCheckout('one-time')">
+                        Order Now - $<span id="oneTimeTotal">39</span>
+                    </button>
+                </div>
+
+                <!-- Annual Subscription -->
+                <div class="pricing-card pricing-card-featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Annual Subscription</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
+                            <span class="period">/year</span>
+                        </div>
+                        <p class="price-description">Automatic compliance updates</p>
+                    </div>
+                    
+                    <ul class="features">
+                        <li>✓ Automatic regulation monitoring</li>
+                        <li>✓ Updated posters mailed when laws change</li>
+                        <li>✓ Year-round compliance guarantee</li>
+                        <li>✓ Professional quality printing</li>
+                        <li>✓ Priority customer support</li>
+                        <li>✓ Municipal Code 165.05 & 151.09 compliant</li>
+                    </ul>
+                    
+                    <div class="frame-kit-option">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="frameKit2" onchange="updateSubscriptionPrice()">
+                            <span class="checkmark"></span>
+                            Add Professional Frame Kit (+$34.99)
+                        </label>
+                        <div class="frame-colors" id="frameColors2" style="display: none;">
+                            <label>Frame Color:</label>
+                            <div class="color-options">
+                                <label class="color-option">
+                                    <input type="radio" name="frameColor2" value="black" checked>
+                                    <span class="color-swatch color-black"></span>
+                                    Black
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="frameColor2" value="wood">
+                                    <span class="color-swatch color-wood"></span>
+                                    Wood
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="frameColor2" value="gold">
+                                    <span class="color-swatch color-gold"></span>
+                                    Gold
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-full" onclick="startCheckout('subscription')">
+                        Start Subscription - $<span id="subscriptionTotal">99</span>/year
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about LA rental compliance</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What compliance posters are required for LA rental properties?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Los Angeles Municipal Code sections 165.05 and 151.09 require specific tenant rights and housing compliance posters to be displayed in rental properties. These include tenant rights notifications, rent stabilization information, and housing quality standards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How often do the compliance requirements change?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>LA housing regulations can change multiple times per year. Our subscription service monitors these changes continuously and automatically sends you updated posters whenever requirements change, ensuring you stay compliant without having to track regulations yourself.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What happens if I don't display the required posters?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Non-compliance can result in fines from the city, legal issues with tenants, and complications during property inspections. Staying compliant protects you from penalties and demonstrates good faith compliance with tenant protection laws.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you serve all areas of Los Angeles?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we serve all rental properties within Los Angeles city limits that are subject to Municipal Code sections 165.05 and 151.09. We ship to any address within our service area.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What's included in the professional frame kit?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our professional frame kit includes a high-quality frame in your choice of black, wood, or gold finish, protective glass, mounting hardware, and installation instructions. The frame protects your posters and provides a professional appearance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Questions about compliance? We're here to help.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <a href="mailto:support@posterpatrol.com">support@posterpatrol.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Business Hours:</strong>
+                        Monday - Friday, 9 AM - 5 PM PST
+                    </div>
+                    <div class="contact-item">
+                        <strong>Response Time:</strong>
+                        We typically respond within 24 hours
+                    </div>
+                </div>
+                
+                <form class="contact-form" onsubmit="submitContactForm(event)">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Poster Patrol</h4>
+                    <p>Simplifying LA rental compliance for property owners</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#pricing">One-time Purchase</a></li>
+                        <li><a href="#pricing">Annual Subscription</a></li>
+                        <li><a href="#pricing">Frame Kits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="mailto:support@posterpatrol.com">Email Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Poster Patrol. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
