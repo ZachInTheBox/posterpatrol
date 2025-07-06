@@ -59,122 +59,45 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Choose Your Compliance Plan</h2>
-                <p>Professional compliance solutions for Los Angeles rental properties</p>
-            </div>
-            
-            <div class="pricing-grid">
-                <!-- One-time Purchase -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>One-Time Purchase</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">39</span>
-                        </div>
-                        <p class="price-description">Current compliance posters</p>
-                    </div>
-                    
-                    <ul class="features">
-                        <li>✓ Complete set of current LA compliance posters</li>
-                        <li>✓ Professional quality printing</li>
-                        <li>✓ Fast delivery to your property</li>
-                        <li>✓ Municipal Code 165.05 & 151.09 compliant</li>
-                    </ul>
-                    
-                    <div class="frame-kit-option">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="frameKit1" onchange="updateOneTimePrice()">
-                            <span class="checkmark"></span>
-                            Add Professional Frame Kit (+$34.99)
-                        </label>
-                        <div class="frame-colors" id="frameColors1" style="display: none;">
-                            <label>Frame Color:</label>
-                            <div class="color-options">
-                                <label class="color-option">
-                                    <input type="radio" name="frameColor1" value="black" checked>
-                                    <span class="color-swatch color-black"></span>
-                                    Black
-                                </label>
-                                <label class="color-option">
-                                    <input type="radio" name="frameColor1" value="wood">
-                                    <span class="color-swatch color-wood"></span>
-                                    Wood
-                                </label>
-                                <label class="color-option">
-                                    <input type="radio" name="frameColor1" value="gold">
-                                    <span class="color-swatch color-gold"></span>
-                                    Gold
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="btn btn-primary btn-full" onclick="startCheckout('one-time')">
-                        Order Now - $<span id="oneTimeTotal">39</span>
-                    </button>
-                </div>
+   <!-- Main Product Options -->
+<section id="order-options" style="display: flex; gap: 2rem; justify-content: center; padding: 2rem;">
+  <div style="border: 1px solid #ccc; padding: 1.5rem; border-radius: 8px; max-width: 400px; text-align: center;">
+    <h3>One-Time Poster Kit</h3>
+    <p><strong>$49.00</strong></p>
+    <p>Includes all currently mandated posters, professional adhesive kit, and installation guide. Does not include future updates.</p>
 
-                <!-- Annual Subscription -->
-                <div class="pricing-card pricing-card-featured">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Annual Subscription</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">99</span>
-                            <span class="period">/year</span>
-                        </div>
-                        <p class="price-description">Automatic compliance updates</p>
-                    </div>
-                    
-                    <ul class="features">
-                        <li>✓ Automatic regulation monitoring</li>
-                        <li>✓ Updated posters mailed when laws change</li>
-                        <li>✓ Year-round compliance guarantee</li>
-                        <li>✓ Professional quality printing</li>
-                        <li>✓ Priority customer support</li>
-                        <li>✓ Municipal Code 165.05 & 151.09 compliant</li>
-                    </ul>
-                    
-                    <div class="frame-kit-option">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="frameKit2" onchange="updateSubscriptionPrice()">
-                            <span class="checkmark"></span>
-                            Add Professional Frame Kit (+$34.99)
-                        </label>
-                        <div class="frame-colors" id="frameColors2" style="display: none;">
-                            <label>Frame Color:</label>
-                            <div class="color-options">
-                                <label class="color-option">
-                                    <input type="radio" name="frameColor2" value="black" checked>
-                                    <span class="color-swatch color-black"></span>
-                                    Black
-                                </label>
-                                <label class="color-option">
-                                    <input type="radio" name="frameColor2" value="wood">
-                                    <span class="color-swatch color-wood"></span>
-                                    Wood
-                                </label>
-                                <label class="color-option">
-                                    <input type="radio" name="frameColor2" value="gold">
-                                    <span class="color-swatch color-gold"></span>
-                                    Gold
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="btn btn-primary btn-full" onclick="startCheckout('subscription')">
-                        Start Subscription - $<span id="subscriptionTotal">99</span>/year
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1Rhl0WGCITZ9hpW25cQLMERn"
+      publishable-key="pk_test_51Ra0ChGCITZ9hpW2jmC3KonlOHoAQuhbUqRoopGM7VLG4qET02M1FsthQlW9bHRTv0TdY2dh3p8klveKq9fZDDLe00lukDuJuN">
+    </stripe-buy-button>
+  </div>
+
+  <div style="border: 2px solid #0070f3; padding: 1.5rem; border-radius: 8px; max-width: 400px; text-align: center; background-color: #f9fbff;">
+    <h3>Always Compliant Package</h3>
+    <p><strong>$99.00 / year</strong></p>
+    <p>Includes automatic poster updates whenever laws change. You’ll receive new posters and install instructions at no additional charge.</p>
+
+    <stripe-buy-button
+      buy-button-id="buy_btn_1Rhl2PGCITZ9hpW27iDxyXSv"
+      publishable-key="pk_test_51Ra0ChGCITZ9hpW2jmC3KonlOHoAQuhbUqRoopGM7VLG4qET02M1FsthQlW9bHRTv0TdY2dh3p8klveKq9fZDDLe00lukDuJuN">
+    </stripe-buy-button>
+  </div>
+</section>
+
+<!-- Frame Add-On Upsell -->
+<section id="frame-upsell" style="margin-top: 2rem; text-align: center; padding: 2rem; background-color: #f5f5f5;">
+  <h3 style="margin-bottom: 0.5rem;">🖼️ Add a Poster Frame (Optional)</h3>
+  <p style="max-width: 600px; margin: 0 auto 1rem;">
+    Upgrade your poster display with a high-quality frame. Sized perfectly to fit the compliance posters, each frame includes wall-safe mounting strips.
+    <br><strong>Choose from:</strong> Black (sleek), Wood (classic), or Gold (elegant).
+  </p>
+
+  <stripe-buy-button
+    buy-button-id="buy_btn_1Rhl31GCITZ9hpW2uarFcocf"
+    publishable-key="pk_test_51Ra0ChGCITZ9hpW2jmC3KonlOHoAQuhbUqRoopGM7VLG4qET02M1FsthQlW9bHRTv0TdY2dh3p8klveKq9fZDDLe00lukDuJuN">
+  </stripe-buy-button>
+</section>
 
     <!-- FAQ Section -->
     <section id="faq" class="faq">
