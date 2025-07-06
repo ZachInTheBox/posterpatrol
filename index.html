@@ -1,117 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Poster Patrol – Rental Compliance Made Easy</title>
-  <meta name="description" content="Stay compliant with rental poster laws effortlessly. We track regulation changes and automatically send you updated posters." />
-  <link rel="stylesheet" href="styles.css" />
-  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Patrol - Los Angeles Rental Compliance Made Easy</title>
+    <meta name="description" content="Simplify LA rental compliance with automatic poster updates. Stay compliant with Municipal Code sections 165.05 and 151.09. Starting at $39.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Poster Patrol</h1>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="btn btn-primary" onclick="scrollToPricing()">Get Started</button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<!-- Navigation -->
-<nav class="nav">
-  <div class="nav-container">
-    <div class="nav-brand"><h1>Poster Patrol</h1></div>
-    <div class="nav-menu" id="nav-menu">
-      <a href="#hero" class="nav-link">Home</a>
-      <a href="#pricing" class="nav-link">Pricing</a>
-      <a href="#faq" class="nav-link">FAQ</a>
-      <a href="#contact" class="nav-link">Contact</a>
-      <button class="btn btn-primary" onclick="document.getElementById('pricing').scrollIntoView()">Get Started</button>
-    </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Los Angeles Rental Compliance Made Easy</h1>
+                <p class="hero-subtitle">
+                    Stay compliant with LA Municipal Code sections 165.05 and 151.09. 
+                    We track regulation changes and automatically mail updated posters to your properties.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToPricing()">Get Compliant Now</button>
+                    <button class="btn btn-secondary btn-large" onclick="scrollToSection('faq')">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="compliance-visual">
+                    <div class="poster-frame">
+                        <div class="poster-content">
+                            <h3>LA MUNICIPAL CODE</h3>
+                            <p>Section 165.05 & 151.09</p>
+                            <div class="compliance-badge">✓ COMPLIANT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Compliance Plan</h2>
+                <p>Professional compliance solutions for Los Angeles rental properties</p>
+            </div>
+            
+           <!-- Main Product Options -->
+<section id="order-options" style="display: flex; gap: 2rem; justify-content: center; padding: 2rem;">
+  <div style="border: 1px solid #ccc; padding: 1.5rem; border-radius: 8px; max-width: 400px; text-align: center;">
+    <h3>One-Time Poster Kit</h3>
+    <p><strong>$49.00</strong></p>
+    <p>Includes all currently mandated posters, professional adhesive kit, and installation guide. Does not include future updates.</p>
+
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1Rhl0WGCITZ9hpW25cQLMERn"
+      publishable-key="pk_test_51Ra0ChGCITZ9hpW2jmC3KonlOHoAQuhbUqRoopGM7VLG4qET02M1FsthQlW9bHRTv0TdY2dh3p8klveKq9fZDDLe00lukDuJuN">
+    </stripe-buy-button>
   </div>
-</nav>
 
-<!-- Hero -->
-<section id="hero" class="hero">
-  <div class="hero-text">
-    <h2>Rental Compliance Made Easy</h2>
-    <p>We handle poster compliance so you can focus on managing your property. Never worry about legal updates again.</p>
-    <a href="#pricing" class="btn-primary">Get Compliant</a>
+  <div style="border: 2px solid #0070f3; padding: 1.5rem; border-radius: 8px; max-width: 400px; text-align: center; background-color: #f9fbff;">
+    <h3>Always Compliant Package</h3>
+    <p><strong>$99.00 / year</strong></p>
+    <p>Includes automatic poster updates whenever laws change. You’ll receive new posters and install instructions at no additional charge.</p>
+
+    <stripe-buy-button
+      buy-button-id="buy_btn_1Rhl2PGCITZ9hpW27iDxyXSv"
+      publishable-key="pk_test_51Ra0ChGCITZ9hpW2jmC3KonlOHoAQuhbUqRoopGM7VLG4qET02M1FsthQlW9bHRTv0TdY2dh3p8klveKq9fZDDLe00lukDuJuN">
+    </stripe-buy-button>
   </div>
 </section>
 
-<!-- Pricing Section -->
-<section id="pricing" class="pricing-section">
-  <h2>Choose Your Compliance Plan</h2>
-  <div class="pricing-cards">
+<!-- Frame Add-On Upsell -->
+<section id="frame-upsell" style="margin-top: 2rem; text-align: center; padding: 2rem; background-color: #f5f5f5;">
+  <h3 style="margin-bottom: 0.5rem;">🖼️ Add a Poster Frame (Optional)</h3>
+  <p style="max-width: 600px; margin: 0 auto 1rem;">
+    Upgrade your poster display with a high-quality frame. Sized perfectly to fit the compliance posters, each frame includes wall-safe mounting strips.
+    <br><strong>Choose from:</strong> Black (sleek), Wood (classic), or Gold (elegant).
+  </p>
 
-    <div class="card">
-      <h3>One-Time Poster Kit</h3>
-      <p class="price">$49</p>
-      <ul>
-        <li>All currently mandated posters</li>
-        <li>Professional quality printing</li>
-        <li>Installation guide + adhesive kit</li>
-        <li>Does not include future updates</li>
-      </ul>
-      <stripe-buy-button
-        buy-button-id="buy_btn_1Rhl0WGCITZ9hpW25cQLMERn"
-        publishable-key="pk_test_51Ra0ChGCITZ9hpW2jmC3KonlOHoAQuhbUqRoopGM7VLG4qET02M1FsthQlW9bHRTv0TdY2dh3p8klveKq9fZDDLe00lukDuJuN">
-      </stripe-buy-button>
-    </div>
-
-    <div class="card featured">
-      <h3>Always Compliant (Annual)</h3>
-      <p class="price">$99/year</p>
-      <ul>
-        <li>Auto-updated posters when laws change</li>
-        <li>Year-round compliance coverage</li>
-        <li>Free shipping for updates</li>
-        <li>Priority support</li>
-      </ul>
-      <stripe-buy-button
-        buy-button-id="buy_btn_1Rhl2PGCITZ9hpW27iDxyXSv"
-        publishable-key="pk_test_51Ra0ChGCITZ9hpW2jmC3KonlOHoAQuhbUqRoopGM7VLG4qET02M1FsthQlW9bHRTv0TdY2dh3p8klveKq9fZDDLe00lukDuJuN">
-      </stripe-buy-button>
-    </div>
-  </div>
-</section>
-
-<!-- Frame Add-On -->
-<section class="frame-section">
-  <h3>Add a Poster Frame (Optional)</h3>
-  <p>Upgrade your compliance display with a sleek poster frame, available in:</p>
-  <ul style="text-align: center; list-style: none;">
-    <li>🖤 Black (sleek + professional)</li>
-    <li>🌲 Wood (natural + classic)</li>
-    <li>🪙 Gold (elegant + eye-catching)</li>
-  </ul>
   <stripe-buy-button
     buy-button-id="buy_btn_1Rhl31GCITZ9hpW2uarFcocf"
     publishable-key="pk_test_51Ra0ChGCITZ9hpW2jmC3KonlOHoAQuhbUqRoopGM7VLG4qET02M1FsthQlW9bHRTv0TdY2dh3p8klveKq9fZDDLe00lukDuJuN">
   </stripe-buy-button>
 </section>
 
-<!-- FAQ Section -->
-<section id="faq" class="faq-section">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-item">
-    <h4>What compliance posters are required?</h4>
-    <p>It depends on your property's location. We research the current laws in your area to ensure your posters are up to date.</p>
-  </div>
-  <div class="faq-item">
-    <h4>How do I know if I'm out of compliance?</h4>
-    <p>If your posters are more than a year old, they may be outdated. Laws change frequently. We help you stay compliant with automatic updates.</p>
-  </div>
-  <div class="faq-item">
-    <h4>How often do regulations change?</h4>
-    <p>In many areas, updates occur several times a year. With a subscription, you’ll receive updates whenever necessary — automatically.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about LA rental compliance</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What compliance posters are required for LA rental properties?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Los Angeles Municipal Code sections 165.05 and 151.09 require specific tenant rights and housing compliance posters to be displayed in rental properties. These include tenant rights notifications, rent stabilization information, and housing quality standards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How often do the compliance requirements change?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>LA housing regulations can change multiple times per year. Our subscription service monitors these changes continuously and automatically sends you updated posters whenever requirements change, ensuring you stay compliant without having to track regulations yourself.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What happens if I don't display the required posters?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Non-compliance can result in fines from the city, legal issues with tenants, and complications during property inspections. Staying compliant protects you from penalties and demonstrates good faith compliance with tenant protection laws.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you serve all areas of Los Angeles?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we serve all rental properties within Los Angeles city limits that are subject to Municipal Code sections 165.05 and 151.09. We ship to any address within our service area.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What's included in the professional frame kit?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our professional frame kit includes a high-quality frame in your choice of black, wood, or gold finish, protective glass, mounting hardware, and installation instructions. The frame protects your posters and provides a professional appearance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Questions about compliance? We're here to help.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <a href="mailto:support@posterpatrol.com">support@posterpatrol.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Response Time:</strong>
+                        We typically respond within 24 hours
+                    </div>
+                </div>
+                
+                
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-header">Get in touch</h2>
+    <p>Questions about compliance? We're here to help.</p>
+
+    <div class="contact-content">
+      <h3>Contact Information</h3>
+      <p><strong>Email:</strong> <a href="mailto:hello@posterpatrol.com">hello@posterpatrol.com</a></p>
+
+      <p><strong>Response Time:</strong><br>
+      We typically respond within 24 hours</p>
+    </div>
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="contact-section">
-  <h2>Contact</h2>
-  <p>Have questions or need help with your order? Email us at <a href="mailto:hello@posterpatrol.com">hello@posterpatrol.com</a>.</p>
-</section>
 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 Poster Patrol. All rights reserved.</p>
-</footer>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Poster Patrol</h4>
+                    <p>Simplifying LA rental compliance for property owners</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#pricing">One-time Purchase</a></li>
+                        <li><a href="#pricing">Annual Subscription</a></li>
+                        <li><a href="#pricing">Frame Kits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="mailto:support@posterpatrol.com">Email Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Poster Patrol. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
