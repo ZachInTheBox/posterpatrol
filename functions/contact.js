@@ -19,8 +19,8 @@ export async function onRequestPost(context) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "Poster Patrol <noreply@posterpatrol.com>",
-      to: "your@email.com", // ← Replace this with your real email
+      from: "Poster Patrol <hello@posterpatrol.com>",
+      to: "zlunchick@gmail.com.com", 
       subject: `Contact Form: ${subject}`,
       html: `<strong>From:</strong> ${name} (${email})<br><br>${message.replace(/\n/g, "<br>")}`,
     }),
